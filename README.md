@@ -1,10 +1,16 @@
 # UnityEnumPopup
-A flexible unity enum popup support display sorted/default enum names
+A unity editor extension display custom enum popup 
 
-Support both Professional/Personal skins
+Support display sorted/default enum names
 
-![image](/UntiyEnumPopupDemo_Professional.png)
+Support search enum by name
+
+Support display enum corresponding values
+
+Support both Personal/Professional skins
+
 ![image](/UntiyEnumPopupDemo_Personal.png)
+![image](/UntiyEnumPopupDemo_Professional.png)
 
 # Useage
 ```C#
