@@ -1,5 +1,9 @@
 # UnityEnumPopup
-A flexible unity enum popup support display sorted/original enum names
+A flexible unity enum popup support display sorted/default enum names
+Support both Professional/Personal skins
+
+![image](/UntiyEnumPopupDemo_Professional.png)
+![image](/UntiyEnumPopupDemo_Personal.png)
 
 # Useage
 ```C#
@@ -17,6 +21,7 @@ public YourEnum m_enum;
 ```
 
 sortType: 0->Alphabet, 1->Default
+
 "YourEnumName": property name displaied in inspector
 
 # Notes
