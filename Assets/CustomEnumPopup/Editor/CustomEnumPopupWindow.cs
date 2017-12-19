@@ -48,6 +48,13 @@ public class CustomEnumPopupWindow : EditorWindow
         this.type = (CustomEnumPopType)type;
         isShowValue = false;
         string[] names = System.Enum.GetNames(enumType);
+        List<string> namesList = new List<string>();
+        foreach (var m_name in names)
+        {
+            namesList.Add(m_name);
+        }
+        namesList.Sort((n1, n2) => { return ((int)System.Enum.Parse(enumType, n1)).CompareTo((int)System.Enum.Parse(enumType, n2)); });
+        names = namesList.ToArray();
         selectSingle = null;
         for (int i = 0; i < names.Length; i++)
         {

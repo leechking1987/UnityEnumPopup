@@ -13,6 +13,13 @@ public class CustomEnumPopupDrawer : PropertyDrawer
             label.text = p.Name;
         }
         string[] names = System.Enum.GetNames(fieldInfo.FieldType);
+        List<string> namesList = new List<string>();
+        foreach (var m_name in names)
+        {
+            namesList.Add(m_name);
+        }
+        namesList.Sort((n1, n2) => { return ((int)System.Enum.Parse(fieldInfo.FieldType, n1)).CompareTo((int)System.Enum.Parse(fieldInfo.FieldType, n2)); });
+        names = namesList.ToArray();
         EditorGUI.BeginProperty(position, label, property);
         Rect prefixPosition = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
         string name;
